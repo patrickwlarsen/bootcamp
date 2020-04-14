@@ -2,3 +2,4 @@ node_modules/
 devcamper_project_resources/
 config.env
 _data/
+package-lock.json
