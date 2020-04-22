@@ -15,11 +15,13 @@ const { protect, authorize } = require('../middleware/auth');
 
 // Include other resource routers
 const courseRouter = require('./courses');
+const reivewRouter = require('./reviews');
 
 const router = express.Router();
 
 // Re-route into other resource routers
 router.use('/:bootcampId/courses', courseRouter);
+router.use('/:bootcampId/reviews', reivewRouter);
 
 router.route('/radius/:zipcode/:distance/:unit').get(getBootcampsInRadius);
 router.route('/radius/:zipcode/:distance').get(getBootcampsInRadius);
